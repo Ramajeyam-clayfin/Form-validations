@@ -1,3 +1,6 @@
+# To view this project click here :
+https://ramajeyam-clayfin.github.io/Form-validations/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
