@@ -145,170 +145,34 @@ export default class FormControl extends Component {
     render() {
         return(
             <div>
-                <Input 
-                    inputType={'text'}
-                    title={"Name : "}
-                    name={'name'}
-                    placeholder={this.state.formControls.name.placeholder} //Enter Your Name
-                    value={this.state.formControls.name.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.name.touched}
-                    valid={this.state.formControls.name.valid}
-                    errorMsg={this.state.formControls.name.errorMsg}
-                />
+                {/* Name Field */}
+                <Input handleChange={this.changeHandler} values={this.state.formControls.name} /> 
 
-                <Input 
-                    inputType={'number'}
-                    title={"Age : "}
-                    name={'age'}
-                    // name1={'age1'}
-                    placeholder={this.state.formControls.age.placeholder}
-                    value={this.state.formControls.age.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.age.touched}
-                    valid={this.state.formControls.age.valid}
-                    errorMsg={this.state.formControls.age.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.age} />
 
-                <Radio  
-                    title={'Gender : '}
-                    name={'gender'}
-                    handleChange={this.changeHandler}
-                    value = {this.state.formControls.gender.value}
-                    options={this.state.formControls.gender.options}
-                    touched={this.state.formControls.gender.touched}
-                    valid={this.state.formControls.gender.valid}
-                    errorMsg={this.state.formControls.gender.errorMsg}
-                /> 
+                <Radio handleChange={this.changeHandler} values={this.state.formControls.gender} /> 
 
-                <Input 
-                    inputType={'email'}
-                    title={"Email : "}
-                    name={'email'}
-                    placeholder={this.state.formControls.email.placeholder}
-                    value={this.state.formControls.email.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.email.touched}
-                    valid={this.state.formControls.email.valid}
-                    errorMsg={this.state.formControls.email.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.email} />
 
-                <Input 
-                    inputType={'number'}
-                    title={"Mobile : "}
-                    name={'mobile'}
-                    placeholder={this.state.formControls.mobile.placeholder}
-                    value={this.state.formControls.mobile.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.mobile.touched}
-                    valid={this.state.formControls.mobile.valid}
-                    errorMsg={this.state.formControls.mobile.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.mobile} />
 
-                <Input 
-                    inputType={'text'}
-                    title={"Address : "}
-                    name={'line1'}
-                    placeholder={this.state.formControls.line1.placeholder}
-                    value={this.state.formControls.line1.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.line1.touched}
-                    valid={this.state.formControls.line1.valid}
-                    errorMsg={this.state.formControls.line1.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.line1} />
 
-                <Input 
-                    inputType={'text'}
-                    // title={"Address"}
-                    name={'line2'}
-                    placeholder={this.state.formControls.line2.placeholder}
-                    value={this.state.formControls.line2.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.line2.touched}
-                    valid={this.state.formControls.line2.valid}
-                    errorMsg={this.state.formControls.line2.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.line2} />
 
-                <Input 
-                    inputType={'text'}
-                    // title={"Address"}
-                    name={'city'}
-                    placeholder={this.state.formControls.city.placeholder}
-                    value={this.state.formControls.city.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.city.touched}
-                    valid={this.state.formControls.city.valid}
-                    errorMsg={this.state.formControls.city.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.city} />
 
-                <Input 
-                    inputType={'text'}
-                    // title={"Address"}
-                    name={'state'}
-                    placeholder={this.state.formControls.state.placeholder}
-                    value={this.state.formControls.state.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.state.touched}
-                    valid={this.state.formControls.state.valid}
-                    errorMsg={this.state.formControls.state.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.state} />
 
-                <Input 
-                    inputType={'number'}
-                    // title={"Address"}
-                    name={'zipcode'}
-                    placeholder={this.state.formControls.zipcode.placeholder}
-                    value={this.state.formControls.zipcode.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.zipcode.touched}
-                    valid={this.state.formControls.zipcode.valid}
-                    errorMsg={this.state.formControls.zipcode.errorMsg}
-                />
+                <Input handleChange={this.changeHandler} values={this.state.formControls.zipcode} />
 
-                <Dropdown 
-                    title={'Country : '}
-                    name={'country'}
-                    placeholder={this.state.formControls.country.placeholder}
-                    value={this.state.formControls.country.value}
-                    handleChange={this.changeHandler}
-                    options={this.state.formControls.country.options}
-                    touched={this.state.formControls.country.touched}
-                    valid={this.state.formControls.country.valid}
-                    errorMsg={this.state.formControls.country.errorMsg}
-                /> <br/>
+                <Dropdown handleChange={this.changeHandler} values={this.state.formControls.country} /> <br/>
 
-                <Radio  
-                    title={'What would you use the library for?'}
-                    name={'radio'}
-                    handleChange={this.changeHandler}
-                    value = {this.state.formControls.radio.value}
-                    options={this.state.formControls.radio.options}
-                    touched={this.state.formControls.radio.touched}
-                    valid={this.state.formControls.radio.valid}
-                    errorMsg={this.state.formControls.radio.errorMsg}
-                /> <br/>
+                <Radio handleChange={this.changeHandler} values={this.state.formControls.radio} /> <br/>
 
-                <Checkbox  
-                    title={'Which sections of the library would you like access to?'}
-                    name={'checkbox'}
-                    handleChange={this.changeHandler}
-                    value = {this.state.formControls.checkbox.value}
-                    options={this.state.formControls.checkbox.options}
-                    touched={this.state.formControls.checkbox.touched}
-                    valid={this.state.formControls.checkbox.valid}
-                    errorMsg={this.state.formControls.checkbox.errorMsg}
-                /> <br/>
+                <Checkbox handleChange={this.changeHandler} values={this.state.formControls.checkbox} /> <br/>
 
-                <Textarea 
-                    title={'About : '}
-                    name={'about'}
-                    placeholder={this.state.formControls.about.placeholder}
-                    value={this.state.formControls.about.value}
-                    handleChange={this.changeHandler}
-                    touched={this.state.formControls.about.touched}
-                    valid={this.state.formControls.about.valid}
-                    errorMsg={this.state.formControls.about.errorMsg}
-                />
+                <Textarea handleChange={this.changeHandler} values={this.state.formControls.about} />
 
                 <Buttong 
                     action = {this.formSubmitHandler}
@@ -324,9 +188,6 @@ export default class FormControl extends Component {
                     title = {'Clear'}
                     style={buttonStyle}
                 /> {/* Clear the form */}
-
-
-
             </div>
         );
     }

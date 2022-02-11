@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Dropdown = (props) => {
     let formControl = "";
 
-    if (props.touched && !props.valid) 
+    if (props.values.touched && !props.values.valid) 
     {
         formControl = 'control-error';
 	}
@@ -16,20 +16,20 @@ const Dropdown = (props) => {
 		
         <div className="form-group">
 			<Form.Group as={Row} className="mb-3">
-			   <Form.Label column sm={3}  htmlFor={props.name} style={{textAlign:"end"}}>
-			   	{props.title}
+			   <Form.Label column sm={3}  htmlFor={props.values.name} style={{textAlign:"end"}}>
+			   	{props.values.title}
 			   </Form.Label>
 			<Col sm={5}>
 				<Form.Select
-					id = {props.name}
-					name={props.name}
-					multiple={props.multiple}
-					value={props.value}
+					id = {props.values.name}
+					name={props.values.name}
+					multiple={props.values.multiple}
+					value={props.values.value}
 					onChange={props.handleChange}
 					className={formControl}
 				>
-					<option value="" disabled>{props.placeholder}</option>
-					{props.options.map((option,index) => {
+					<option value="" disabled>{props.values.placeholder}</option>
+					{props.values.options.map((option,index) => {
 						return (
 							<option
 								key={index}
@@ -42,7 +42,7 @@ const Dropdown = (props) => {
 				</Form.Select>
 			</Col>
 		    
-			{ props.errorMsg  ? <p style={{color: "red"}}>{props.errorMsg}</p>: null }
+			{ props.values.errorMsg  ? <p style={{color: "red"}}>{props.values.errorMsg}</p>: null }
 			</Form.Group>
 		</div>
 	)

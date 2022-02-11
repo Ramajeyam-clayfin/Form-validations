@@ -6,7 +6,7 @@ const Checkbox = (props) => {
   
   let formControl = "checkbox-inline";
 
-  if (props.touched && !props.valid) 
+  if (props.values.touched && !props.values.valid) 
   {
     formControl = 'checkbox-inline control-error';
   }
@@ -15,22 +15,22 @@ const Checkbox = (props) => {
        
         <div className="form-group">
             <Form.Group as={Row} className="mb-3">
-                <Form.Label column sm={3} htmlFor={props.name}style={{textAlign:"end"}}>
-                    {props.title}
+                <Form.Label column sm={3} htmlFor={props.values.name}style={{textAlign:"end"}}>
+                    {props.values.title}
                 </Form.Label>
                 <Col sm={5} className={formControl} style={{textAlign:"start"}}>
-                {props.options.map((option,index) => {
+                {props.values.options.map((option,index) => {
                     return (
                             <Form.Check 
                                 key={index}
-                                 id = {props.name}
-                                 name={props.name}
+                                 id = {props.values.name}
+                                 name={props.values.name}
                                  onChange={props.handleChange}
                                  label={option.displayValue}
                                  value={option.value}
-                                 checked={ props.value.indexOf(option.value) > -1 }
+                                 checked={ props.values.value.indexOf(option.value) > -1 }
                                  type="checkbox" 
-                                 isInvalid={ !!props.errorMsg}
+                                 isInvalid={ !!props.values.errorMsg}
                             />         
                     );
                 })}
@@ -38,7 +38,7 @@ const Checkbox = (props) => {
 
 
                 </Col>
-                { props.errorMsg  ? <p style={{color: "red"}}>{props.errorMsg}</p>: null }
+                { props.values.errorMsg  ? <p style={{color: "red"}}>{props.values.errorMsg}</p>: null }
             </Form.Group>
         </div>
     );

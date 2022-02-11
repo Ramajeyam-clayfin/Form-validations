@@ -1,7 +1,9 @@
 export let initialState =   {
         
     name : { 
+      name:'name',
         type: 'text',
+        title:"Name : ",
         value: '',
         placeholder: 'Enter Your Name',
         valid: false,
@@ -15,7 +17,9 @@ export let initialState =   {
       },
 
       age : {  
+        name:'age',
         type: 'number',
+        title:"Age : ",
         value: '',
         placeholder: 'Enter Your Age',
         valid: false,
@@ -30,7 +34,9 @@ export let initialState =   {
       },
 
       gender: {
+        name:'gender',
         type: 'radio',
+        title:"Gender : ",
         value: '',
         placeholder: 'Gender',
         valid: false,
@@ -46,7 +52,9 @@ export let initialState =   {
       },
 
       email: {
+        name:'email',
         type: 'text',
+        title:"Email : ",
         value: '',
         placeholder: 'Enter Email ID',
         valid: false,
@@ -59,7 +67,9 @@ export let initialState =   {
       },
 
       mobile : {  
+        name:'mobile',
         type: 'number',
+        title:"Mobile : ",
         value: '',
         placeholder: 'Enter Your Mobile Number',
         valid: false,
@@ -74,7 +84,9 @@ export let initialState =   {
       },
 
         line1: {
+          name:'line1',
             type: 'text',
+            title:"Address : ",
             value: '',
             placeholder: 'Address Line 1',
             valid: false,
@@ -86,7 +98,9 @@ export let initialState =   {
             }
         },
         line2: {
+          name:'line2',
             type: 'text',
+            title:"",
             value: '',
             placeholder: 'Address Line 2',
             valid: false,
@@ -98,7 +112,9 @@ export let initialState =   {
             }
         },
         city: {
+          name:'city',
             type: 'text',
+            title:"",
             value: '',
             placeholder: 'City',
             valid: false,
@@ -110,7 +126,9 @@ export let initialState =   {
             }
         },
         state: {
+          name:'state',
             type: 'text',
+            title:"",
             value: '',
             placeholder: 'State',
             valid: false,
@@ -122,7 +140,9 @@ export let initialState =   {
             }
         },
         zipcode: {
+          name:'zipcode',
             type: 'number',
+            title:" ",
             value: '',
             placeholder: 'Zipcode',
             valid: false,
@@ -134,7 +154,9 @@ export let initialState =   {
             }
         },
         country: {
+          name:'country',
             type: 'select',
+            title:"Country : ",
             value: '',
             placeholder: 'Country',
             valid: false,
@@ -152,6 +174,8 @@ export let initialState =   {
 
 
       radio: {
+        name:'radio',
+        title:'What would you use the library for?',
         type: 'radio',
         value: '',
         placeholder: 'What would you use the library for?',
@@ -169,6 +193,8 @@ export let initialState =   {
       },
 
       checkbox: {
+        name:'checkbox',
+        title:'Which sections of the library would you like access to?',
         type: 'checkbox',
         value: [],
         placeholder: ' Which sections of the library would you like access to?',
@@ -188,7 +214,9 @@ export let initialState =   {
       },
       
       about: {
+        name:'about',
         type: 'textarea',
+        title:"About : ",
         value: '',
         placeholder: 'Tell About Yourself...',
         valid: false,
