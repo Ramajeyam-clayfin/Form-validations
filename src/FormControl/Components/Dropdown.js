@@ -34,7 +34,8 @@ const Dropdown = (props) => {
 							<option
 								key={index}
 								value={option.value}
-								label={option.displayValue}>{option.displayValue}
+							>
+								{option.displayValue}
 							</option>
 						);
 					})}

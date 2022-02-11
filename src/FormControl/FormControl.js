@@ -23,21 +23,13 @@ export default class FormControl extends Component {
     changeHandler = event => {
     
         const name = event.target.name;
-        const title = event.target.name1;
-        console.log("Name : "+name);
-        console.log("title : "+title);
         const updatedControls = { ...this.state.formControls }; //all values in formcontrols
         const updatedFormElement = { ...updatedControls[name] }; // in formcontrols stores only the value where the change is happened
-        // console.log(updatedFormElement);
+      
   
         let value; //used to store the values of where the change is happened
         let selectedOptions; //used to store the values of where the change is happened
         let newValArray; //used to store the values of where the change is happened
-
-        if(name === 'address' )
-        {
-
-        }
   
         if (updatedControls[name].value instanceof Array &&
             updatedControls[name].type === 'select' )                 //check if the change is happened in dropdown box
@@ -45,7 +37,6 @@ export default class FormControl extends Component {
             selectedOptions = event.target.selectedOptions;
             // newValArray = [...selectedOptions].map(option => option.value);
             value = selectedOptions.value;
-            // console.log("Select - Value : "+value);
         }
         else 
         {
@@ -54,24 +45,20 @@ export default class FormControl extends Component {
             if( updatedControls[name].value instanceof Array &&
                 updatedControls[name].type === 'checkbox' )         //check if the change is happened in checkbox box
             {
-                // console.log("Before Checkbox Value : "+value);
                 if(updatedControls[name].value.indexOf(value) > -1)  // ckecks if checkbox value is having the same value or not using indexof array method
                 {
                     newValArray = updatedControls[name].value.filter(s => s !== value) // filter and stores in newValArray except the same value that is passed 
-                    console.log("Checkbox 1 Value : "+value)
+               
                 } 
                 else 
                 {
                     newValArray = [...updatedControls[name].value, value]; // if no duplicate values passed then using spread concat the values
-                    console.log("Checkbox  2 Value : "+value)
                 }
                 value = newValArray; // stores the values in newValArray into value
-                console.log("Checkbox Value : "+value)
             }
             else    //else the values are stored in values 
             {
                 value = event.target.value
-                console.log("Value : "+value)
             }
         }
        
@@ -79,7 +66,6 @@ export default class FormControl extends Component {
         updatedFormElement.touched = true;
   
         let ValidationResult = Validation(value, updatedFormElement.validationRules);
-        // console.log(ValidationResult);
         updatedFormElement.valid = ValidationResult.valid; // change the valid  which has been changed and stores in locally
 
         if ((!updatedFormElement.valid) && updatedFormElement.touched) //for update the error message value
@@ -111,15 +97,38 @@ export default class FormControl extends Component {
 
     formSubmitHandler = () => {
         const formData = {};
+        const touched = {};
+        const updatedControls = { ...this.state.formControls }; 
+        let updatedFormElement = { };
+
         for (let formElementId in this.state.formControls) 
         {
+            touched[formElementId] = this.state.formControls[formElementId].touched;
             formData[formElementId] = this.state.formControls[formElementId].value; // in formData{} stores only values of each datas
         }
-        let newLine = '\r\n';
-        alert(
-          ` Name : ${formData.name}${newLine} Age : ${formData.age}${newLine} Email : ${formData.email}${newLine} Mobile : ${formData.mobile}${newLine} Address : ${formData.line1}, ${formData.line2}, ${formData.city}, ${formData.state}, ${formData.zipcode} - ${formData.country}${newLine} What would you use the library for : ${formData.radio}${newLine} Which sections of the library would you like access to : ${formData.checkbox}${newLine} About : ${formData.about} `
-        );
-        // console.dir(formData);
+
+        const delselect =  Object.keys(touched).filter((f) => touched[f] === false); 
+
+        if(delselect.length !== 0){
+            for(let object in delselect ){
+ 
+                updatedFormElement = { ...updatedControls[delselect[object]] };
+                updatedFormElement.errorMsg = `Oops you missed ${delselect[object]} !! `
+                updatedControls[delselect[object]] = updatedFormElement;
+            }
+        }
+        else {
+            let newLine = '\r\n';
+            alert(
+            ` Name : ${formData.name}${newLine} Age : ${formData.age}${newLine} Email : ${formData.email}${newLine} Mobile : ${formData.mobile}${newLine} Address : ${formData.line1}, ${formData.line2}, ${formData.city}, ${formData.state}, ${formData.zipcode} - ${formData.country}${newLine} What would you use the library for : ${formData.radio}${newLine} Which sections of the library would you like access to : ${formData.checkbox}${newLine} About : ${formData.about} `
+            );
+        }
+        
+        this.setState(
+            {
+                formControls: updatedControls
+            }
+        ); 
     }
 
     handleClearForm = () => {

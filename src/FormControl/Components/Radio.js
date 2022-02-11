@@ -23,6 +23,7 @@ const Radio = (props) => {
                                 value={option.value}
                                 checked={ props.value === option.value }
                                 onChange={props.handleChange}
+                                isInvalid={ !!props.errorMsg}
                             />
                         
                         </Col>

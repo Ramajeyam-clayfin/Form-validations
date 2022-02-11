@@ -18,11 +18,11 @@ const Checkbox = (props) => {
                 <Form.Label column sm={3} htmlFor={props.name}style={{textAlign:"end"}}>
                     {props.title}
                 </Form.Label>
-                <Col sm={3} className={formControl} style={{textAlign:"start"}}>
+                <Col sm={5} className={formControl} style={{textAlign:"start"}}>
                 {props.options.map((option,index) => {
                     return (
-                        
                             <Form.Check 
+                                key={index}
                                  id = {props.name}
                                  name={props.name}
                                  onChange={props.handleChange}
@@ -31,8 +31,7 @@ const Checkbox = (props) => {
                                  checked={ props.value.indexOf(option.value) > -1 }
                                  type="checkbox" 
                                  isInvalid={ !!props.errorMsg}
-                            />
-                                
+                            />         
                     );
                 })}
                                 {/* <Form.Control.Feedback type='invalid'>{ props.errorMsg }</Form.Control.Feedback> */}
