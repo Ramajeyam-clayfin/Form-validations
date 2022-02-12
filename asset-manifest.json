@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Form-validations/static/css/main.3b8844f0.css",
-    "main.js": "/Form-validations/static/js/main.f57628b8.js",
+    "main.js": "/Form-validations/static/js/main.6b4ec15f.js",
     "index.html": "/Form-validations/index.html",
     "main.3b8844f0.css.map": "/Form-validations/static/css/main.3b8844f0.css.map",
-    "main.f57628b8.js.map": "/Form-validations/static/js/main.f57628b8.js.map"
+    "main.6b4ec15f.js.map": "/Form-validations/static/js/main.6b4ec15f.js.map"
   },
   "entrypoints": [
     "static/css/main.3b8844f0.css",
-    "static/js/main.f57628b8.js"
+    "static/js/main.6b4ec15f.js"
   ]
 }
