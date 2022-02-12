@@ -3,6 +3,7 @@ export let initialState =   {
     name : { 
       name:'name',
         type: 'text',
+        text: '',
         title:"Name : ",
         value: '',
         placeholder: 'Enter Your Name',
@@ -12,12 +13,14 @@ export let initialState =   {
         validationRules: {
           minLength: 4,
           maxLength: 20,
+          isAlpha: true,
           isRequired: true,
          },
       },
 
       age : {  
         name:'age',
+        text: '',
         type: 'number',
         title:"Age : ",
         value: '',
@@ -33,8 +36,27 @@ export let initialState =   {
          },
       },
 
+      password: {
+        name:'password',
+        text: 'Min 8 characters at least 1 Uppercase , 1 Lowercase, 1 Number and 1 Special Character',
+        type: 'text',
+        title:"Password : ",
+        value: '',
+        placeholder: '',
+        valid: false,
+        errorMsg: '',
+        touched: false,
+        validationRules: {
+          minLength: 8,
+          isRequired: true,
+          password: true
+        },
+      },
+
+
       gender: {
         name:'gender',
+        text: '',
         type: 'radio',
         title:"Gender : ",
         value: '',
@@ -53,6 +75,7 @@ export let initialState =   {
 
       email: {
         name:'email',
+        text: '',
         type: 'text',
         title:"Email : ",
         value: '',
@@ -68,6 +91,7 @@ export let initialState =   {
 
       mobile : {  
         name:'mobile',
+        text: '',
         type: 'number',
         title:"Mobile : ",
         value: '',
@@ -77,14 +101,152 @@ export let initialState =   {
         touched: false,
         validationRules: {
           minLength: 10,
-          maxLength: 12,
+          maxLength: 13,
           isRequired: true,
-          isNumber: true
+          isNumber: true,
+          mobile: true
         },
+      },
+
+      aadhar: {
+        name:'aadhar',
+        text: 'Ex: 1234 1234 1234',
+          type: 'text',
+          title:"Aadhar Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 14,
+              isRequired: true,
+              aadhar: true
+          }
+      },
+
+      license: {
+        name:'license',
+        text: 'Ex: HR-0619850034761 OR HR06 19850034761',
+          type: 'text',
+          title:"Driving License : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 16,
+              isRequired: true,
+              license: true
+          }
+      },
+      
+      passport: {
+        name:'passport',
+        text: 'Ex: A2096457 OR A21 90457',
+          type: 'text',
+          title:"Passport Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 8,
+              isRequired: true,
+              passport: true
+          }
+      },
+      
+      pancard: {
+        name:'pancard',
+        text: 'Ex: BNZAA2318J',
+          type: 'text',
+          title:"Pancard Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 10,
+              isRequired: true,
+              pancard: true
+          }
+      },
+
+      ifsc: {
+        name:'ifsc',
+        text: 'Ex: SBIN0125620',
+          type: 'text',
+          title:"IFSC Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 11,
+              isRequired: true,
+              ifsc: true
+          }
+      },
+      
+      mastercard: {
+        name:'mastercard',
+        text: 'Ex: 5114496353984312',
+          type: 'text',
+          title:"MasterCard Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 16,
+              isRequired: true,
+              mastercard: true
+          }
+      },
+
+      visacard: {
+        name:'visacard',
+        text: 'Ex: 4155279860457',
+          type: 'text',
+          title:"VisaCard Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 13,
+              isRequired: true,
+              visacard: true
+          }
+      },
+
+      cvv: {
+        name:'cvv',
+        text: 'Ex: 561',
+          type: 'text',
+          title:"CVV Number : ",
+          value: '',
+          placeholder: '',
+          valid: false,
+          errorMsg: '',
+          touched: false,
+          validationRules: {
+              minLength: 3,
+              isRequired: true,
+              cvv: true
+          }
       },
 
         line1: {
           name:'line1',
+          text: '',
             type: 'text',
             title:"Address : ",
             value: '',
@@ -99,6 +261,7 @@ export let initialState =   {
         },
         line2: {
           name:'line2',
+          text: '',
             type: 'text',
             title:"",
             value: '',
@@ -113,6 +276,7 @@ export let initialState =   {
         },
         city: {
           name:'city',
+          text: '',
             type: 'text',
             title:"",
             value: '',
@@ -122,11 +286,13 @@ export let initialState =   {
             touched: false,
             validationRules: {
                 minLength: 4,
+                isAlpha: true,
                 isRequired: true
             }
         },
         state: {
           name:'state',
+          text: '',
             type: 'text',
             title:"",
             value: '',
@@ -136,11 +302,13 @@ export let initialState =   {
             touched: false,
             validationRules: {
                 minLength: 4,
+                isAlpha: true,
                 isRequired: true
             }
         },
         zipcode: {
           name:'zipcode',
+          text: '',
             type: 'number',
             title:" ",
             value: '',
@@ -150,11 +318,14 @@ export let initialState =   {
             touched: false,
             validationRules: {
                 minLength: 6,
-                isRequired: true
+                isRequired: true,
+                isNumber: true,
+                zipcode: true
             }
         },
         country: {
           name:'country',
+          text: '',
             type: 'select',
             title:"Country : ",
             value: '',
@@ -175,6 +346,7 @@ export let initialState =   {
 
       radio: {
         name:'radio',
+        text: '',
         title:'What would you use the library for?',
         type: 'radio',
         value: '',
@@ -194,6 +366,7 @@ export let initialState =   {
 
       checkbox: {
         name:'checkbox',
+        text: '',
         title:'Which sections of the library would you like access to?',
         type: 'checkbox',
         value: [],
@@ -215,6 +388,7 @@ export let initialState =   {
       
       about: {
         name:'about',
+        text: '',
         type: 'textarea',
         title:"About : ",
         value: '',

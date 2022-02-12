@@ -29,6 +29,7 @@ const Input = (props) => {
                         isInvalid={ !!props.values.errorMsg}
                         isValid={props.values.touched && !props.values.errorMsg}
                     />
+                    <Form.Text>{props.values.text}</Form.Text>
                     <Form.Control.Feedback type='invalid' >{ props.values.errorMsg }</Form.Control.Feedback>
                     
                 </Col>

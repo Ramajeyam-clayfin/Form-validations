@@ -63,11 +63,29 @@ export default class FormControl extends Component {
 
                 <Input handleChange={this.handleChange} values={this.state.formControls.age} />
 
+                <Input handleChange={this.handleChange} values={this.state.formControls.password} />
+
                 <Radio handleChange={this.handleChange} values={this.state.formControls.gender} /> 
 
                 <Input handleChange={this.handleChange} values={this.state.formControls.email} />
 
                 <Input handleChange={this.handleChange} values={this.state.formControls.mobile} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.aadhar} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.license} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.passport} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.pancard} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.ifsc} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.mastercard} />
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.visacard} />
+
+                {/* <Input handleChange={this.handleChange} values={this.state.formControls.cvv} /> */}
 
                 <Input handleChange={this.handleChange} values={this.state.formControls.line1} />
 
