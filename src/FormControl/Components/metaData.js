@@ -227,22 +227,22 @@ export let initialState =   {
           }
       },
 
-      cvv: {
-        name:'cvv',
-        text: 'Ex: 561',
-          type: 'text',
-          title:"CVV Number : ",
-          value: '',
-          placeholder: '',
-          valid: false,
-          errorMsg: '',
-          touched: false,
-          validationRules: {
-              minLength: 3,
-              isRequired: true,
-              cvv: true
-          }
-      },
+      // cvv: {
+      //   name:'cvv',
+      //   text: 'Ex: 561',
+      //     type: 'text',
+      //     title:"CVV Number : ",
+      //     value: '',
+      //     placeholder: '',
+      //     valid: false,
+      //     errorMsg: '',
+      //     touched: false,
+      //     validationRules: {
+      //         minLength: 3,
+      //         isRequired: true,
+      //         cvv: true
+      //     }
+      // },
 
         line1: {
           name:'line1',

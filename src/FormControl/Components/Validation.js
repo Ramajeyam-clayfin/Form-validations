@@ -186,9 +186,9 @@ const Validation = (value, rules) => {
           break;
           case 'isAlpha': 
             tmpisValid = alphaValidator(checkval); 
-            console.log(tmpisValid)
+            // console.log(tmpisValid)
             tmpErrorMsg = !tmpisValid ? 'Alpha Field' : ''   
-            console.log(tmpErrorMsg)
+            // console.log(tmpErrorMsg)
             isValid = isValid && tmpisValid
             if(!tmpisValid)
               errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -380,7 +380,7 @@ const cvvValidator = value => {
 
 const alphaValidator = value => {
   if(value.length >0) {
-    const pattern = /^[a-zA-Z]+$/
+    const pattern = /^[a-zA-Z\s]*$/
     return pattern.test(value)	
   }
   else

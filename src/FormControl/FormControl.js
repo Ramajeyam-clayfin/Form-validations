@@ -44,15 +44,15 @@ export default class FormControl extends Component {
         );  
     }
 
-    handleClearForm = () => {
+    // handleClearForm = () => {
 
-      this.setState(
-        {
-            formControls: initialState,
-            formIsValid: false
-        }
-      );
-    }
+    //   this.setState(
+    //     {
+    //         formControls: initialState,
+    //         formIsValid: false
+    //     }
+    //   );
+    // }
 
 
     render() {
@@ -113,12 +113,12 @@ export default class FormControl extends Component {
                     disabled={! this.state.formIsValid}
                 /> { /*Submit */ }
                 
-                <Buttong
+                {/* <Buttong
                     action = {this.handleClearForm}
                     type = {'secondary'}
                     title = {'Clear'}
                     style={buttonStyle}
-                /> {/* Clear the form */}
+                /> Clear the form */}
             </div>
         );
     }
