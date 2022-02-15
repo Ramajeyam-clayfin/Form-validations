@@ -37,9 +37,7 @@ const Validation = (value, rules) => {
           
         case 'maxLength': 
               tmpisValid = maxLengthValidator(checkval, rules[rule]); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? `Max Length - ${rules[rule]}` : '' 
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -47,9 +45,7 @@ const Validation = (value, rules) => {
 
           case 'isRequired': 
               tmpisValid = requiredValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Mandatory Field' : '' 
-            //   console.log(tmpErrorMsg) 
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -57,9 +53,7 @@ const Validation = (value, rules) => {
 
           case 'isNumber': 
               tmpisValid = numberValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Numeric Field' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -67,9 +61,7 @@ const Validation = (value, rules) => {
           
           case 'isEmail': 
               tmpisValid = emailValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Email' : '' 
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)    
@@ -77,9 +69,7 @@ const Validation = (value, rules) => {
 
           case 'password': 
               tmpisValid = passValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Password' : '' 
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)    
@@ -87,9 +77,7 @@ const Validation = (value, rules) => {
           
           case 'mobile': 
               tmpisValid = mobileValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Mobile Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -97,9 +85,7 @@ const Validation = (value, rules) => {
           
           case 'zipcode': 
               tmpisValid = zipcodeValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Zipcode' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -107,9 +93,7 @@ const Validation = (value, rules) => {
           
           case 'aadhar': 
               tmpisValid = aadharValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Aadhar Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -117,9 +101,7 @@ const Validation = (value, rules) => {
           
           case 'license': 
               tmpisValid = licenseValidator(checkval); 
-            //   console.log(tmpisValid)
-              tmpErrorMsg = !tmpisValid ? 'Invalid License Number' : ''   
-            //   console.log(tmpErrorMsg)
+              tmpErrorMsg = !tmpisValid ? 'Invalid License Number' : '' 
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -127,9 +109,7 @@ const Validation = (value, rules) => {
 
           case 'passport': 
               tmpisValid = passportValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid Passport Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -137,9 +117,7 @@ const Validation = (value, rules) => {
       
           case 'pancard': 
               tmpisValid = pancardValidator(checkval); 
-            //   console.log(tmpisValid)
-              tmpErrorMsg = !tmpisValid ? 'Invalid Pancard Number' : ''   
-            //   console.log(tmpErrorMsg)
+              tmpErrorMsg = !tmpisValid ? 'Invalid Pancard Number' : ''  
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -147,9 +125,7 @@ const Validation = (value, rules) => {
           
           case 'ifsc': 
               tmpisValid = ifscValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid IFSC Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -157,9 +133,7 @@ const Validation = (value, rules) => {
           
           case 'mastercard': 
               tmpisValid = mastercardValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid MasterCard Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -167,9 +141,7 @@ const Validation = (value, rules) => {
           
           case 'visacard': 
               tmpisValid = visacardValidator(checkval); 
-            //   console.log(tmpisValid)
-              tmpErrorMsg = !tmpisValid ? 'Invalid VisaCard Number' : ''   
-            //   console.log(tmpErrorMsg)
+              tmpErrorMsg = !tmpisValid ? 'Invalid VisaCard Number' : ''  
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -177,18 +149,23 @@ const Validation = (value, rules) => {
           
           case 'cvv': 
               tmpisValid = cvvValidator(checkval); 
-            //   console.log(tmpisValid)
               tmpErrorMsg = !tmpisValid ? 'Invalid CVV Number' : ''   
-            //   console.log(tmpErrorMsg)
               isValid = isValid && tmpisValid
               if(!tmpisValid)
                 errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
           break;
+
           case 'isAlpha': 
             tmpisValid = alphaValidator(checkval); 
-            // console.log(tmpisValid)
-            tmpErrorMsg = !tmpisValid ? 'Alpha Field' : ''   
-            // console.log(tmpErrorMsg)
+            tmpErrorMsg = !tmpisValid ? 'Alpha Field' : '' 
+            isValid = isValid && tmpisValid
+            if(!tmpisValid)
+              errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
+          break;
+
+          case 'dob': 
+            tmpisValid = dobValidator(checkval); 
+            tmpErrorMsg = !tmpisValid ? 'Age should be 18 or above' : ''   
             isValid = isValid && tmpisValid
             if(!tmpisValid)
               errorMsg = setErrorMsg(errorMsg,tmpErrorMsg)  
@@ -213,12 +190,10 @@ const Validation = (value, rules) => {
 
         if (ErrMessage.length > 0) 
         {
-            resMessage=ErrMessage.concat(',',' ',message)
+            resMessage=ErrMessage.concat(',',message)
         }
         else
             resMessage=message
-
-        // console.log(resMessage);
         return resMessage;
     }
 
@@ -231,14 +206,12 @@ const Validation = (value, rules) => {
         return value.length <= maxLength;
     }
 
- 
     //Check to confirm that field is required
  
     const requiredValidator = value => {
         return value.trim() !== '';	
     }
 
-  
     // Check to confirm that field has only numbers
     
     const numberValidator = value => {
@@ -385,6 +358,43 @@ const alphaValidator = value => {
   }
   else
     return true;
+}
+
+const dobValidator = value => {
+  let newdate = value;
+  let date = newdate.getDate();
+  let month = newdate.getMonth() + 1;
+  let year = newdate.getFullYear();
+  let dateString =  `${date < 10 ? `0${date}` : `${date}`}/${ month < 10 ? `0${month}` : `${month}`}/${year}` ;
+        
+  let regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+  if (regex.test(dateString)) {
+    let parts = dateString.split("/");
+    let dtDOB = new Date(parts[1] + "/" + parts[0] + "/" + parts[2]);
+    let dtCurrent = new Date();
+
+    if (dtCurrent.getFullYear() - dtDOB.getFullYear() < 18) {
+      return false ;
+    }
+
+    // eslint-disable-next-line eqeqeq
+    if (dtCurrent.getFullYear() - dtDOB.getFullYear() == 18) {
+      //CD: 11/06/2018 and DB: 15/07/2000. Will turn 18 on 15/07/2018.
+      if (dtCurrent.getMonth() < dtDOB.getMonth()) {
+        return false ;
+      }
+      // eslint-disable-next-line eqeqeq
+      if (dtCurrent.getMonth() == dtDOB.getMonth()) {
+        //CD: 11/06/2018 and DB: 15/06/2000. Will turn 18 on 15/06/2018.
+        if (dtCurrent.getDate() < dtDOB.getDate()) {
+          return false ;
+        }
+      }
+            
+    }
+    return true ;
+  }
 }
   
 export default Validation;

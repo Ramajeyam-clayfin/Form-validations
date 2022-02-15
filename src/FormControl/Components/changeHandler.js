@@ -39,9 +39,25 @@ const changeHandler =(event, formControls) => {
             value = event.target.value
         }
     }
+    
    
     updatedFormElement.value = value; // change the value  which has been changed and stores in locally
     updatedFormElement.touched = true;
+
+    if(name === 'dob'){
+        value = event.target.valueAsDate
+        for(let changeage in updatedControls ){
+            if(updatedControls[changeage].name === 'age'){
+                let year = value.getFullYear();
+                let dtCurrent = new Date();
+                let curryear = dtCurrent.getFullYear();
+                let age = curryear-year;
+                updatedControls[changeage].value = age; // change the value  which has been changed and stores in locally
+                updatedControls[changeage].touched = true;
+            }
+        }
+        
+    }
 
     let ValidationResult = Validation(value, updatedFormElement.validationRules);
     updatedFormElement.valid = ValidationResult.valid; // change the valid  which has been changed and stores in locally

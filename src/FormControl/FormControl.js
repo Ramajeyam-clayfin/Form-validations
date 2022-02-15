@@ -44,22 +44,14 @@ export default class FormControl extends Component {
         );  
     }
 
-    // handleClearForm = () => {
-
-    //   this.setState(
-    //     {
-    //         formControls: initialState,
-    //         formIsValid: false
-    //     }
-    //   );
-    // }
-
 
     render() {
         return(
             <div>
                 {/* Name Field */}
                 <Input handleChange={this.handleChange} values={this.state.formControls.name} /> 
+
+                <Input handleChange={this.handleChange} values={this.state.formControls.dob} />
 
                 <Input handleChange={this.handleChange} values={this.state.formControls.age} />
 

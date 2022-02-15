@@ -22,7 +22,7 @@ const Input = (props) => {
                         className={formControl}
                         id={props.values.name}
                         value={props.values.value}
-                        type={props.values.inputType}
+                        type={props.values.type}
                         placeholder={props.values.placeholder}
                         name={props.values.name}
                         onChange={props.handleChange}

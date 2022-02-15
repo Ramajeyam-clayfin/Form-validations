@@ -1,5 +1,6 @@
-// import FormControl from './FormControl/FormControl';
-import Example1 from './UseEffect/example1';
+import FormControl from './FormControl/FormControl';
+// import Example1 from './UseEffect/example1';
+// import DateAge from './Dateage/DateAge';
 import './App.css';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Form Validations</h1>
       <hr/><br/>
-      <Example1/>
+      <FormControl/>
     </div>
   );
 }

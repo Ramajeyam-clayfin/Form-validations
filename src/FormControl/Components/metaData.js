@@ -17,6 +17,21 @@ export let initialState =   {
           isRequired: true,
          },
       },
+      dob : {  
+        name:'dob',
+        text: '',
+        type: 'date',
+        title:"D.O.B : ",
+        value: '',
+        placeholder: '',
+        valid: false,
+        errorMsg: '',
+        touched: false,
+        validationRules: {
+          dob: true
+         },
+      },
+
 
       age : {  
         name:'age',
