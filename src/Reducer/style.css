@@ -1,0 +1,24 @@
+.App {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+  
+.completed {
+    text-decoration: line-through;
+    text-align: center;
+}
+
+.none {
+    text-decoration: none;
+    text-align: center;
+}
+  
+.delete {
+    cursor: pointer;
+    margin-left: 18px;
+}
+  
+.todoItem {
+    cursor: pointer;
+}
+  

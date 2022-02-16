@@ -105,12 +105,6 @@ export default class FormControl extends Component {
                     disabled={! this.state.formIsValid}
                 /> { /*Submit */ }
                 
-                {/* <Buttong
-                    action = {this.handleClearForm}
-                    type = {'secondary'}
-                    title = {'Clear'}
-                    style={buttonStyle}
-                /> Clear the form */}
             </div>
         );
     }
