@@ -3,7 +3,8 @@
 // import DateAge from './Dateage/DateAge';
 // import Shop from './Reducer/shop'
 // import RoutingExample1 from './Routing/RoutingExample1'
-import Home from './Reduxreducer/Home';
+// import Home from './Reduxreducer/Home';
+import Home from './RestaurantApp/Home';
 import './App.css';
 
 function App() {
