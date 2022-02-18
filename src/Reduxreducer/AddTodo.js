@@ -1,9 +1,10 @@
-import React, {useContext, useState} from "react";
-import {TodoListContext } from './Context';
+import React, { useState} from "react";
+import {useDispatch  } from 'react-redux';
+import * as actionCreators from './Actions';
 
 export const AddTodo = () => {
     const [inputValue, setInputValue] = useState("");
-    const { addTodoItem } = useContext(TodoListContext);
+    const dispatch = useDispatch();
   
     return (
       <>
@@ -13,9 +14,11 @@ export const AddTodo = () => {
           placeholder={"Type and add todo item"}
           onChange={(e) => setInputValue(e.target.value)}
         /> 
-        <button onClick={() => { addTodoItem(inputValue); setInputValue(""); }}>
+        <button onClick={() => { dispatch(actionCreators.additem(inputValue)); setInputValue(""); }}>
           Add
         </button>
       </>
     );
   };
+
+export default AddTodo;

@@ -18,8 +18,8 @@ export const Provider = ({ children }) => {
       dispatch({ type: actions.REMOVE_TODO_ITEM, todoItemId });
     },
 
-    markAsCompleted: (todoItemId, event) => {
-      dispatch({ type: actions.TOGGLE_COMPLETED, todoItemId, event });
+    markAsCompleted: (todoItemId) => {
+      dispatch({ type: actions.TOGGLE_COMPLETED, todoItemId });
     }
 
   };
