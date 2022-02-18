@@ -3,8 +3,7 @@ import { useSelector, useDispatch  } from 'react-redux';
 import * as actionCreators from './Actions';
 
 const TodoList = () => {
-    const todoList1 = useSelector((state) => state.todoList)
-    console.log(todoList1)
+    const todoList1 = useSelector( (state) => state.todoList)
     const dispatch = useDispatch();
 
     return (
