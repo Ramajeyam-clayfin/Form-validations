@@ -1,22 +1,20 @@
-import React from "react";
-import { Redirect, Route } from "react-router-dom";
-import {fakeAuth} from "./Login";
+import React from "react"
+import { Navigate, useLocation } from "react-router-dom"
+import { fakeAuth } from "./fakeAuth"
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-    return (
-      <Route
-        {...rest}
-        render={props =>
-          fakeAuth.isAuthenticated === true ? (
-            <Component {...props} />
-          ) : (
-            <Redirect
-              to={{ pathname: "/login", state: { from: props.location } }}
-            />
-          )}
-      />
-    );
-  };
+/**
+ * A wrapper around the element which checks if the user is authenticated
+ * If authenticated, renders the passed element
+ * If not authenticated, redirects the user to Login page.
+ */
+const PrivateElement = ({ children }) => {
+  let location = useLocation()
+  console.log('private route page')
+  return (<div>Private route{fakeAuth.isAuthenticated ? (
+    children
+  ) : (
+    <Navigate to="/login" state={{ from: location }} />
+  )}</div>);
+}
 
-  export default PrivateRoute;
-  
+export default PrivateElement

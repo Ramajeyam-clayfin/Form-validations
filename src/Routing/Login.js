@@ -1,58 +1,26 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
+import React from "react"
+import { useNavigate, useLocation } from "react-router-dom"
+import { fakeAuth } from "./fakeAuth"
 
+function LoginPage() {
+  let navigate = useNavigate()
+  let location = useLocation()
 
-class Login extends React.Component {
-
-  constructor() {
-
-    super();
-
-    this.state = {
-      redirectToReferrer: false
-    }
-    this.login = this.login.bind(this);
-  }
-
-  login() {
-
-    fakeAuth.authenticate(() => {
-      this.setState({ redirectToReferrer: true })
+  let { from } = location.state || { from: { pathname: "/" } }
+  let login = () => {
+    fakeAuth.login(() => {
+      navigate(from)
     })
   }
+  console.log('login page')
 
-  render() {
-    
-    const { from } = this.props.location.state || { from: { pathname: '/' } }
-    console.log(this.props.location, 'login');
-    const { redirectToReferrer } = this.state;
-
-    if (redirectToReferrer) {
-      return (
-        <Redirect to={from} />
-      )
-    }
-
-    return (
-      <div>
-        <p>You must log in to view the page at {from.pathname}</p>
-        <button onClick={this.login}>Log in</button>
-      </div>
-    )
-  }
-
-
+  return (
+    <div>
+      login page
+      <p>You must log in to view the page at {from.pathname}</p>
+      <button onClick={login}>Log in</button>
+    </div>
+  )
 }
 
-/* A fake authentication function */
-
-export const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true;
-    setTimeout(cb, 100);
-  }
-};
-
-
-export default Login
+export default LoginPage
