@@ -1,4 +1,4 @@
-import  {actions} from './ActionTypes'
+// import  {actions} from './ActionTypes'
 import { createSlice } from '@reduxjs/toolkit'
 
 export const counterSlice = createSlice({
@@ -8,18 +8,6 @@ export const counterSlice = createSlice({
     },
     reducers: {
         ADD_TODO_ITEM: (state, action) => {
-        // Redux Toolkit allows us to write "mutating" logic in reducers. It
-        // doesn't actually mutate the state because it uses the Immer library,
-        // which detects changes to a "draft state" and produces a brand new
-        // immutable state based off those changes
-        // state.value += 1
-        // state.todoList = [ ...state.todoList,
-        //     {
-        //         id: new Date().valueOf(),
-        //         item: action.value,
-        //         completed: false
-        //     }
-        // ] ;
         console.log('ADD_TODO_ITEM :', action)
         return { todoList: 
                             [ ...state.todoList,
