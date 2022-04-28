@@ -4,6 +4,7 @@
 // import Shop from './Reducer/shop'
 // import RoutingExample1 from './Routing/RoutingExample1'
 // import Home from './Reduxreducer/Home';
+import Home from './ReduxToolkit/Home';
 // import Home from './RestaurantApp/Home';
 import './App.css';
 import { NavLink as Link, Route, Routes } from "react-router-dom"
@@ -16,8 +17,8 @@ function App() {
     <div className="App">
       <h1>Form Validations</h1>
       <hr/><br/>
-      {/* <Home/> */}
-      <div className="App">
+      <Home/>
+      {/* <div className="App">
       <nav>
         <ul>
           <li>
@@ -40,7 +41,7 @@ function App() {
           <Route path="login" element={<LoginPage />}></Route>
         </Routes>
       </div>
-    </div>
+    </div> */}
     </div>
   );
 }
