@@ -14,6 +14,7 @@ const TodoList = () => {
                     style={{float:'left'}}
                     type='checkbox'
                     key={todoItem.id}
+                    checked={todoItem.completed}
                     onClick={() => dispatch(actionCreators.completed(todoItem.id))}
                 />
 
