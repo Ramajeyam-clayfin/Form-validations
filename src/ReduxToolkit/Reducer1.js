@@ -8,24 +8,26 @@ export const counterSlice = createSlice({
     },
     reducers: {
         ADD_TODO_ITEM: (state, action) => {
-        console.log('ADD_TODO_ITEM :', action)
-        return { todoList: 
-                            [ ...state.todoList,
-                                {
-                                    id: new Date().valueOf(),
-                                    item: action.payload,
-                                    completed: false
-                                }
-                            ]
-                        };
+        // console.log('ADD_TODO_ITEM :', action)
+        
+        state.todoList = [ ...state.todoList,
+            {
+              id: new Date().valueOf(),
+              item: action.payload,
+              completed: false
+            }
+          ]
       },
+
       REMOVE_TODO_ITEM: (state, action) => {
         // state.value -= 1
         const filteredTodoItem = state.todoList.filter(
             (todoItem) => todoItem.id !== action.payload
             );
+
         state.todoList = filteredTodoItem ;
       },
+
       TOGGLE_COMPLETED: (state, action) => {
         // state.value += action.payload
         const updatedTodoList = state.todoList.map((todoItem) =>
